@@ -31,7 +31,7 @@ if (isRegistered == true) {
 
 /* Dadi */
 
-let buttonRandom = document.querySelector('button');
+const buttonRandom = document.querySelector('button');
 buttonRandom.addEventListener('click', function() {
     let userNumber = Math.floor(Math.random() * 7);
     document.getElementById('user').innerHTML += userNumber;
@@ -50,3 +50,12 @@ buttonRandom.addEventListener('click', function() {
     }
 }
 );
+
+const buttonCancel = document.getElementById('button-cancel');
+buttonCancel.addEventListener('click', function() {
+    userNumber = '';
+    document.getElementById('user').innerHTML = userNumber;
+    
+    computerNumber = '';
+    document.getElementById('computer').innerHTML = computerNumber;
+})
