@@ -3,15 +3,34 @@ const boxEmail = ["cucu6@gmail.com", "lulu5@gmail.com", "miciostyle@gmail.com", 
 console.log(boxEmail);
 
 const userEmail = prompt('Inserisci la tua email');
-console.log(userEmail);
 
-if (boxEmail.includes(userEmail)) { 
+/* la prima soluzione */
+let isRegistered = false;
+
+for (let i = 0; i < boxEmail.length; i++) {
+    if (boxEmail[i] == userEmail) {
+        isRegistered = true;
+    }
+}
+
+if (isRegistered == true) {
     alert('La tua email esiste nel nostro archivio!');
 } else {
     alert('Purtroppo la tua email non esiste nel nostro archivio!');
 }
 
+/* la seconda soluzione */
+
+/* if (boxEmail.includes(userEmail)) { 
+    alert('La tua email esiste nel nostro archivio!');
+} else {
+    alert('Purtroppo la tua email non esiste nel nostro archivio!');
+} */
+
+
+
 /* Dadi */
+
 let buttonRandom = document.querySelector('button');
 buttonRandom.addEventListener('click', function() {
     let userNumber = Math.floor(Math.random() * 7);
